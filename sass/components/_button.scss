@@ -9,6 +9,9 @@
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
     cursor: pointer;
     position: relative;
+
+    // Change for button element
+    border: none;
     &::after {
         content: "";
         display: inline-block;
@@ -27,7 +30,9 @@
         opacity: 0;
     }
 
-    &:active {
+    &:active,
+    &:focus {
+        outline: none;
         transform: translateY(-0.1rem);
         box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
     }
@@ -41,6 +46,7 @@
     }
     &--green {
         background-color: $color-primary;
+        font-weight: 700;
         color: $color-white;
         &::after {
             background-color: $color-primary;
